@@ -1,14 +1,19 @@
 class Pet {
+    idPet;
     raca;
     idade;
     porte;
     pelagem;
     sociavel;
+    cor;
+    sexo
     localidade;
+    filhote;
 
-    static perfilPet = [];
+    static petsCadastrados = [];
 
-    constructor(raca, idade, porte, pelagem, sociavel, localidade){
+    constructor(idPet, raca, idade, porte, pelagem, sociavel, cor, sexo, localidade){
+        this.idPet = idPet;
         this.raca = raca;
         this.idade = idade;
 
@@ -21,19 +26,24 @@ class Pet {
         this.porte = porte;
         this.pelagem = pelagem;
         this.sociavel = sociavel;
+        this.cor = cor;
+        this.sexo = sexo;
         this.localidade = localidade;
 
-        Pet.perfilPet.push(this)
+        Pet.petsCadastrados.push(this)
     }
 
     
-    cadastroPet(raca, idade, porte, pelagem, sociavel, localidade) {
+    cadastroPet(idPet, raca, idade, porte, pelagem, sociavel, cor, sexo, localidade) {
         if(Pet instanceof Pet) {
+            this.idPet = idPet;
             this.raca = raca;
             this.idade = idade;
             this.porte = porte;
             this.pelagem = pelagem;
             this.sociavel = sociavel;
+            this.cor = cor;
+            this.sexo = sexo;
             this.localidade = localidade;
     
             return "Pet cadastrado";
@@ -44,9 +54,9 @@ class Pet {
 
     contatoComOutrosPets() {
         if(this.sociavel === true) {
-            console.log("Esse animal é sociável e pode ter contato com outros pets.")
+           return "Esse animal é sociável e pode ter contato com outros pets."
         } else {
-            console.log("Esse animal NÃO é sociável. O ideal é que o Tutor não possua outros pets.")
+            return "Esse animal NÃO é sociável. O ideal é que o Tutor não possua outros pets."
         }
     }
 }

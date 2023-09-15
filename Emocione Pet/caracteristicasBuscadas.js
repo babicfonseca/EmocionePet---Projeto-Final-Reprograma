@@ -1,15 +1,15 @@
 const { Tutor } = require("./tutor");
 
 class Caracteristicas {
-    idade; //filhote ou adulto
-    pelagem; //curta ou longa - se alérgico, tem q ser curta
-    porte; // pequeno, médio ou grande
+    filhote;
+    pelagem; 
+    porte;
     sociavel;
     
     static caracteristicasBuscadas = []
 
-    constructor(idade, pelagem, porte, sociavel) {
-        this.idade = idade;
+    constructor(filhote, pelagem, porte, sociavel) {
+        this.filhote = filhote;
         this.pelagem = pelagem;
         this.porte = porte;
         this.sociavel = sociavel;

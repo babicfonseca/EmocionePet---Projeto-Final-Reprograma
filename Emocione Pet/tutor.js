@@ -1,5 +1,3 @@
-const { Pet } = require("./pet")
-
 class Tutor {
     nome;
     idade; // se for idoso, não pode ser pet filhote, pq tem mais energia
@@ -12,7 +10,7 @@ class Tutor {
     motivoAdocao;
     caracteristicasBuscadas;
 
-    static perfilTutor = [];
+    static tutoresCadastrados = [];
 
     constructor(nome, idade, telefone, email, localidade, alergiaAPelo, possuiOutrosAnimais, motivoAdocao, caracteristicas) {
         this.nome = nome;
@@ -29,11 +27,23 @@ class Tutor {
         this.email = email;
         this.localidade = localidade;
         this.alergiaAPelo = alergiaAPelo;
+        if(this.alergiaAPelo === true) {
+            if(caracteristicas.pelagem !== curto){
+                throw new Error("Não é indicado pets de pelo longo para pessoas alérgicas.")
+            }
+        };
+
         this.possuiOutrosAnimais = possuiOutrosAnimais;
         this.motivoAdocao = motivoAdocao // suporte emocional. Seria só pra suporte emocional?
         this.caracteristicasBuscadas = caracteristicas;
 
-        Tutor.perfilTutor.push(this);
+        if(idade >= 60){
+            if(caracteristicas.idade < 12){
+                throw new Error("Não é indicado pets filhotes para pessoas de 60 anos ou mais.")
+            }
+        }
+
+        Tutor.tutoresCadastrados.push(this);
     }
 
     get telefone() {
@@ -56,7 +66,7 @@ class Tutor {
             this.possuiOutrosAnimais = possuiOutrosAnimais;
             this.motivoAdocao = motivoAdocao;
             this.caracteristicasBuscadas = caracteristicas;
-    
+                
             return "Tutor cadastrado";
         } else {
             throw new Error("Erro no cadastro, dados inválidos");
