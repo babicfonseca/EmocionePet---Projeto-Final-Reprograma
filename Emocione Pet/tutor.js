@@ -1,3 +1,5 @@
+const { Pet } = require("./pet");
+
 class Tutor {
     nome;
     idade;
@@ -38,7 +40,7 @@ class Tutor {
         this.caracteristicasBuscadas = caracteristicas;
 
         if(idade >= 60){
-            if(caracteristicas.idade < 12){
+            if(caracteristicas.filhote === true){
                 throw new Error("Não é indicado pets filhotes para pessoas de 60 anos ou mais.")
             }
         }
@@ -82,3 +84,4 @@ class Tutor {
 
 
 module.exports = { Tutor };
+

@@ -30,7 +30,7 @@ class Pet {
         this.sexo = sexo;
         this.localidade = localidade;
 
-        Pet.petsCadastrados.push(this)
+        Pet.petsCadastrados.push(this);
     }
 
     

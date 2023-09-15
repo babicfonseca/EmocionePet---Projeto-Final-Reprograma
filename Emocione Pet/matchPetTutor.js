@@ -17,7 +17,12 @@ function matchPetTutor(tutor){
     return petsCadastradosFiltrados;
 }
 
-let listaFiltradaPets = matchPetTutor(tutores[0])
+let listaFiltradaPets = matchPetTutor(tutores[6])
+console.log(listaFiltradaPets)
 if(listaFiltradaPets.lenght === 0) {
     console.log("Não há animais disponíveis para adoção com as características informadas.")
 }
+
+module.exports = { matchPetTutor }
+
+//console.log(Pet.petsCadastrados)

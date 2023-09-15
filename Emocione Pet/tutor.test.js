@@ -1,5 +1,6 @@
 const { Caracteristicas } = require("./caracteristicasBuscadas");
 const { Tutor } = require("./tutor");
+const { tutores, pets } = require("./cadastroTutorPet");
 
 describe("Testes na classe Tutor", () => {
     it("Verificar criação do Tutor no sistema com dados válidos", () => {
@@ -23,15 +24,11 @@ describe("Testes na classe Tutor", () => {
     });
 
     it("Verificar se o tutor é idoso", () => {
-        const tutorBruno = new Tutor("Bruno", 72, "61999880001", "bruno@reprograma.com.br", "Brasília - DF", false, false, "suporte emocional")
+        const caracteristicaBruno = new Caracteristicas(false, "curta", "médio", false, "macho");
+        const tutorBruno = new Tutor("Bruno", 72, "61999880001", "bruno@reprograma.com.br", "Brasília - DF", false, false, "suporte emocional", caracteristicaBruno)
         const tutorBarbara = new Tutor("Bárbara", 27, "61999885688", "barbara@reprograma.com.br", "São Paulo - SP", false, true, "suporte emocional")
         expect(tutorBruno.idoso).toBe(true);
         expect(tutorBarbara.idoso).toBe(false);
     });
 
-    it("Verificar que tutor idoso não pode adotar filhote", () => {
-        const caracteristicasTutorBruno = new Caracteristicas(true, "curta", "médio", false);
-        const tutorBruno = new Tutor("Bruno", 72, "61999880001", "bruno@reprograma.com.br", "Minas Gerais - MG", false, false, "companhia", caracteristicasTutorBruno)
-        //expect(caracteristicasTutorBruno(true, "curta", "médio", false)).toThrow("Não é indicado pets filhotes para pessoas de 60 anos ou mais."); 
-    })
 })

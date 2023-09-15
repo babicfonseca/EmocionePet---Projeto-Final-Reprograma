@@ -294,7 +294,11 @@ Foi utilizado o método de testes unitários para que fossem feitos testes em pe
 
 Exemplo na classe Tutor:
 
-
+</br>
+<div align="center">
+  <img width=100% src="./src/testesTutor.png" alt="testes pet"/>
+</div>
+</br>
 
 Exemplo na classe Pet:
 
@@ -309,5 +313,13 @@ Exemplo na classe Caracteristicas:
 </br>
 <div align="center">
   <img width=100% src="./src/testesCaracterísticas.png" alt="testes caracteristicas"/>
+</div>
+</br>
+
+Exemplo na função matchPetTutor:
+
+</br>
+<div align="center">
+  <img width=100% src="./src/testesMatch.png" alt="testes caracteristicas"/>
 </div>
 </br>
