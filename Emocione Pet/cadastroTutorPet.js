@@ -6,22 +6,22 @@ const { Tutor } = require("./tutor");
 
 // Lista de características buscadas e tutores cadastrados
 
-const caracteristicaTutor1 = new Caracteristicas(true, "curta", "grande", true);
+const caracteristicaTutor1 = new Caracteristicas(true, "curta", "grande", true, "macho");
 const tutor1 = new Tutor("Bárbara", 27, "61999885688", "barbara@reprograma.com.br", "São Paulo - SP", false, true, "suporte emocional", caracteristicaTutor1);
 
-const caracteristicaTutor2 = new Caracteristicas(false, "longa", "médio", false);
+const caracteristicaTutor2 = new Caracteristicas(false, "longa", "médio", false, "fêmea");
 const tutor2 = new Tutor("Maria Luiza", 7, "61999880000", "malu@reprograma.com.br", "Brasília - DF", false, false, "suporte emocional", caracteristicaTutor2);
 
-const caracteristicaTutor3  = new Caracteristicas(true, "longa", "pequeno", true);
+const caracteristicaTutor3  = new Caracteristicas(true, "longa", "pequeno", true, "macho");
 const tutor3 = new Tutor("Yan", 29, "61999885001", "yan@reprograma.com.br", "Vitória - ES", false, true, "companhia", caracteristicaTutor3);
 
-const caracteristicaTutor4 = new Caracteristicas(true, "curta", "médio", false);
+const caracteristicaTutor4 = new Caracteristicas(true, "curta", "médio", false, "macho");
 const tutor4 = new Tutor("Bruno", 72, "61999880001", "bruno@reprograma.com.br", "Minas Gerais - MG", false, false, "companhia", caracteristicaTutor4);
 
-const caracteristicaTutor5 = new Caracteristicas(false, "longa", "pequeno", false);
+const caracteristicaTutor5 = new Caracteristicas(false, "longa", "pequeno", false, "fêmea");
 const tutor5 = new Tutor("Anna Catarina", 35, "61999550001", "anna@reprograma.com.br", "Brasília - DF", true, true, "suporte emocional", caracteristicaTutor5);
 
-const caracteristicaTutor6 = new Caracteristicas(false, "longa", "pequeno", false);
+const caracteristicaTutor6 = new Caracteristicas(false, "longa", "pequeno", false, "fêmea");
 const tutor6 = new Tutor("Regina", 62, "61988550001", "regina@reprograma.com.br", "Brasília - DF", true, false, "suporte emocional", caracteristicaTutor6);
 
 

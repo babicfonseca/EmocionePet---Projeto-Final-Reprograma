@@ -8,6 +8,12 @@ describe("Testes da classe Pet", () => {
         expect(pet1.sociavel).toBe(true);
     });
 
+    it("Verificar cadastro com dados incorretos", () => {
+        const pet1 = new Pet();
+        expect(() => pet1.cadastroPet(1, "SRD", 10, "médio", "curta", true, "branco e marrom", "macho", "São Paulo - SP")).toThrow("Erro no cadastro, dados inválidos");
+
+    })
+
     it("Verificar se o pet é filhote", () => {
         const pet1 = new Pet(1, "SRD", 10, "medio", "curta", true, "branco e marrom", "macho", "São Paulo - SP");
         expect(pet1.filhote).toBe(true);

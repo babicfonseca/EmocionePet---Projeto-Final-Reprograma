@@ -28,4 +28,10 @@ describe("Testes na classe Tutor", () => {
         expect(tutorBruno.idoso).toBe(true);
         expect(tutorBarbara.idoso).toBe(false);
     });
+
+    it("Verificar que tutor idoso não pode adotar filhote", () => {
+        const caracteristicasTutorBruno = new Caracteristicas(true, "curta", "médio", false);
+        const tutorBruno = new Tutor("Bruno", 72, "61999880001", "bruno@reprograma.com.br", "Minas Gerais - MG", false, false, "companhia", caracteristicasTutorBruno)
+        //expect(caracteristicasTutorBruno(true, "curta", "médio", false)).toThrow("Não é indicado pets filhotes para pessoas de 60 anos ou mais."); 
+    })
 })

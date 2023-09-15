@@ -1,6 +1,6 @@
 class Tutor {
     nome;
-    idade; // se for idoso, não pode ser pet filhote, pq tem mais energia
+    idade;
     idoso;
     #telefone;
     email;

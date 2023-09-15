@@ -6,7 +6,7 @@ class Pet {
     pelagem;
     sociavel;
     cor;
-    sexo
+    sexo;
     localidade;
     filhote;
 

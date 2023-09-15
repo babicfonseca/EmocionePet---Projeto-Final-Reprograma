@@ -5,6 +5,7 @@ class Caracteristicas {
     pelagem; 
     porte;
     sociavel;
+
     
     static caracteristicasBuscadas = []
 
